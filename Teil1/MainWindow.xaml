@@ -1,0 +1,126 @@
+﻿<Window x:Class="Teil1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Teil1"
+        mc:Ignorable="d"
+        Title="Express-o" Height="817.617" Width="1192.5" ResizeMode="CanResize" SizeToContent="Manual" WindowStartupLocation="Manual" WindowState="Normal">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="953*"/>
+            <ColumnDefinition Width="92*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Kopjes:" Height="39" Margin="2,460,948.859,288" FontSize="18" FontFamily="Segoe UI Light" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="Inkomsten:" Margin="609,595,202.859,139" FontSize="18" FontFamily="Segoe UI Light" Grid.Column="2"/>
+        <Label Content="Koffes verkocht:" Margin="609,557,175.859,163" FontSize="18" FontFamily="Segoe UI Light" Grid.Column="2"/>
+        <Label Content="Antel Klanten:" Margin="609,519,210.859,230" FontSize="18" FontFamily="Segoe UI Light" Grid.Column="2"/>
+        <Label Content="Nieuw:" Height="39" Margin="609,10,202.859,738" FontSize="18" FontFamily="Segoe UI Light" Grid.Column="2"/>
+        <Label Content="Fooi:" Margin="2,497,948.859,252" FontSize="18" FontFamily="Segoe UI Light" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="Grootte:" Margin="4,6,0,748" Height="33" HorizontalAlignment="Left" Width="101" RenderTransformOrigin="0.943,-3.293" FontSize="16" FontFamily="Segoe UI Light" Grid.Column="1">
+
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.106"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button Content="Bestel" Margin="100,546,785.859,209" RenderTransformOrigin="0.5,0.5" FontSize="16" Grid.ColumnSpan="2" Grid.Column="1">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.412"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Toevoegen" Margin="901,12,0,0" RenderTransformOrigin="0.5,0.5" FontSize="16" Click="Button_Click" HorizontalAlignment="Left" Width="115" Height="40" VerticalAlignment="Top" Grid.Column="2" Grid.ColumnSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.412"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox TextWrapping="Wrap" Margin="96,504,0,252" HorizontalAlignment="Left" Width="206" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" FontSize="14" HorizontalScrollBarVisibility="Visible" Grid.ColumnSpan="2" Grid.Column="1" Text="0"/>
+        <TextBox TextWrapping="Wrap" Margin="96,467,0,290" HorizontalAlignment="Left" Width="206" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" FontSize="14" HorizontalScrollBarVisibility="Visible" Grid.ColumnSpan="2" Grid.Column="1" Text="0"/>
+        <TextBox TextWrapping="Wrap" Margin="689,10,0,725" HorizontalAlignment="Left" Width="206" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" FontSize="20" HorizontalScrollBarVisibility="Visible" Grid.Column="2"/>
+        <Rectangle Fill="#FFF4F4F5" Stroke="Black" Margin="244,0,348.859,124" Grid.Column="2"/>
+        <Button Content="Plaats in wachtrij" Margin="101,584,784.859,171" RenderTransformOrigin="0.5,0.5" FontSize="16" Grid.ColumnSpan="2" Grid.Column="1">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.412"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+        <StackPanel Grid.ColumnSpan="4">
+
+            <ComboBox IsEditable="True" Margin="0,0,860,100" RenderTransformOrigin="0.506,0.56" HorizontalAlignment="Right" Width="224" Height="48" Background="{DynamicResource {x:Static SystemColors.MenuBarBrushKey}}">
+
+                <ComboBoxItem Content="Medium"/>
+                <ComboBoxItem Content="Large"/>
+                <ComboBoxItem Content="Small"/>
+            </ComboBox>
+
+            <Label Content="Koffiesoort:" Margin="0,0,1085,59" Height="35" FontSize="18" FontFamily="Segoe UI Light" HorizontalAlignment="Right" Width="97" RenderTransformOrigin="0.5,0.5"/>
+
+
+
+
+
+        </StackPanel>
+        <ListView Margin="96,165,767.859,550" Grid.ColumnSpan="2" Grid.Column="1">
+            <ListViewItem>
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock><Run Text="Americano"/></TextBlock>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem >
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock><Run Text="Espresso"/></TextBlock>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem >
+
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock ><Run Text="Double Espresso"/></TextBlock>
+
+
+
+                </StackPanel>
+
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock><Run Text="Latte"/></TextBlock>
+                </StackPanel>
+            </ListViewItem>
+        </ListView>
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="263" Margin="716,203,0,0" VerticalAlignment="Top" Width="306" Grid.ColumnSpan="2" Source="ssss.jpg"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="796,529,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" Height="28" Text="0"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="796,606,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" Height="28" Text="0"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="796,568,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" Height="28" Text="0"/>
+
+
+
+
+    </Grid>
+</Window>
